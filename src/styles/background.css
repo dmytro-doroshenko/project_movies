@@ -1,0 +1,21 @@
+.bg-white{
+    background: #fff;
+}
+
+.bg-brown{
+    background: #4A3600;
+}
+
+.bg-light-brown{
+    background: #FFFBF0;
+}
+
+.bg-dark-yellow{
+    background-color: #BC9321;
+}
+
+@media screen and (max-width: 1200px){
+    .bg-xl-brown{
+        background: #4A3600;
+    }
+}

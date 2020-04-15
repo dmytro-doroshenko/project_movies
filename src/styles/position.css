@@ -1,0 +1,26 @@
+.position-absolute{
+    position: absolute;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.position-fixed{
+    position: fixed;
+}
+
+.z-top{
+    z-index: 9999;
+}
+
+.fixed-top{
+    top: 0;
+    left: 0;
+}
+
+.fixed-center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

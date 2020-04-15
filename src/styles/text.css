@@ -1,0 +1,99 @@
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.text-light-grey{
+    color: #b2b2b2;
+}
+
+.text-grey{
+    color: #919191;
+}
+
+.text-gray{
+    color: #727272;
+}
+
+.text-brown{
+    color: #4A3600;
+}
+
+.text-light-brown{
+    color: #BC9321;
+}
+
+.text-14px{
+    font-size: 14px;
+}
+
+.text-16px{
+    font-size: 1rem;
+}
+
+.text-18px{
+    font-size: 18px;
+}
+
+.text-20px{
+    font-size: 20px;
+}
+
+.text-22px{
+    font-size: 22px;
+}
+
+.text-24px{
+    font-size: 1.5rem;
+}
+
+.text-42px{
+    font-size: 42px;
+}
+
+.font-weight-300{
+    font-weight: 300;
+}
+
+.font-weight-400{
+    font-weight: 400;
+}
+
+.font-weight-500{
+    font-weight: 500;
+}
+
+.font-weight-700{
+    font-weight: 700;
+}
+
+.font-weight-900{
+    font-weight: 900;
+}
+
+.text-roboto{
+    font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 768px){
+    .text-md-center{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .text-sm-center{
+        text-align: center;
+    }
+}
