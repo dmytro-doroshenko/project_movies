@@ -1,5 +1,5 @@
 :root{
-    --primary-color: #f00;
+    --primary-color: #0d253f;
 }
 
 *{
@@ -18,3 +18,4 @@ img{
 .h-100{
     height: 100vh;
 }
+

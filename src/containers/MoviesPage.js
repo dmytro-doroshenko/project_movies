@@ -2,24 +2,22 @@ import React, {useEffect} from 'react';
 import MoviesList from "../components/MoviesList/MoviesList";
 import {bindActionCreators} from "redux";
 import { connect } from 'react-redux';
-import {
-    endLoadingActionCreator,
-    getMoviesActionCreator, getMoviesData,
-    startLoadingActionCreator
-} from "../actionCreators/movies.action";
+import {getMoviesData} from "../actionCreators/movies.action";
+import {PaginationWithRedux} from "../components/Pagination/Pagination";
 
 
-function MoviesPage({getMovies, movies, loading}) {
-
-
+function MoviesPage(props) {
+    const {getMovies, movies, loading, match: {params: {pageNum}}} = props;
     useEffect(() => {
-        getMovies();
-    }, []);
+
+        getMovies(pageNum);
+    }, [pageNum]);
 
 
    return (
        <div className='container'>
            <MoviesList movies={movies} loading={loading}/>
+           <PaginationWithRedux />
        </div>
    )
 }
@@ -29,7 +27,7 @@ const mapStateToProps = (state) => {
     return {
         loading: state.moviesReducer.loading,
         isLoaded: state.moviesReducer.isLoaded,
-        movies: state.moviesReducer.moviesListWithInfo.results,
+        movies: state.moviesReducer.moviesList,
     }
 };
 

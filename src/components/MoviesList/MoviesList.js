@@ -6,7 +6,6 @@ const CN = 'movies_list';
 
 function MoviesList({movies, loading}) {
 
-
     return (
         <div className={`${CN}`}>
             {loading && <div>Loading...</div>}

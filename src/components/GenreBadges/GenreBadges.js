@@ -3,7 +3,7 @@ import './GenreBadges.scss';
 
 const CN = 'genre_badge';
 
-function GenreBadges({genre_ids}) {
+function GenreBadges({genre_ids, genresWithNames}) {
 
     const [genres, setGenres] = useState('');
 
@@ -11,9 +11,12 @@ function GenreBadges({genre_ids}) {
     const header = {Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMWU1ZDJjNjY5MDJmYzZlYTBmODI0MDlkYjZhNmM2YyIsInN1YiI6IjVlODQ4MjUxZTM4YmQ4MDAxMWFiODNmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vkMPTJhClcMrTyrqz1_OcT1XZqRUOUhznmF9Ai2cCLw'};
 
     useEffect(() => {
-        fetch(url, {headers: header})
-            .then(response => response.json())
-            .then(result => setGenres(result.genres))
+        if (!genresWithNames) {
+            fetch(url, {headers: header})
+                .then(response => response.json())
+                .then(result => setGenres(result.genres))
+        }
+
 
     }, []);
 
@@ -25,9 +28,14 @@ function GenreBadges({genre_ids}) {
 
 
     return (
-        <div>{
-            genres.length && genre_ids.map(item => <div key={item} className={`${CN}`}>{getGenreName(item)}</div>)
-        }</div>
+        <div>
+            {
+            genresWithNames && genresWithNames.map(genre => <div key={genre.id} className={`${CN}`}>{genre.name}</div>)
+        }
+        {
+            genres && genre_ids && genre_ids.map(item => <div key={item} className={`${CN}`}>{getGenreName(item)}</div>)
+        }
+        </div>
     );
 }
 

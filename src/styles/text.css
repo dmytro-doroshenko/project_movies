@@ -10,8 +10,13 @@
     text-align: center;
 }
 
+/*--------------Colors--------------*/
 .text-white{
     color: #fff;
+}
+
+.text-black{
+    color: #000;
 }
 
 .text-light-grey{
@@ -33,6 +38,7 @@
 .text-light-brown{
     color: #BC9321;
 }
+/*--------------Colors End--------------*/
 
 .text-14px{
     font-size: 14px;
