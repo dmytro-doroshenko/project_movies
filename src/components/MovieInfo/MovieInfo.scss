@@ -1,6 +1,15 @@
 .movie_info_page{
 
+  color: var(--color-tertiary);
+  padding: 8px;
+  min-height: 100%;
+
+  &__title{
+    padding: 8px 0;
+    text-align: start;
+  }
+
   &__details{
-    padding-left: 2rem;
+    padding-left: 24px;
   }
 }

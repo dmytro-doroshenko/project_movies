@@ -2,6 +2,7 @@
   padding: 20px;
   background: var(--color-primary);
   color: var(--font-color);
+  transition: all 0.4s;
 
   &__logo {
     background-color: var(--bg-logo);

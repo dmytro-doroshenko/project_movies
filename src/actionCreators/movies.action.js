@@ -1,9 +1,16 @@
-import {START_LOADING, END_LOADING, GET_MOVIES, GET_MOVIE_INFO, CHANGE_PAGE} from "../actionTypes/movies";
+import {
+    START_LOADING,
+    END_LOADING,
+    GET_MOVIES,
+    GET_MOVIE_INFO,
+    CLEAR_CURRENT_MOVIE
+} from "../actionTypes/movies";
 
 export const getMoviesActionCreator = (moviesWithInfo) => ({type: GET_MOVIES, payload: moviesWithInfo})
 export const startLoadingActionCreator = () => ({type: START_LOADING});
 export const endLoadingActionCreator = () => ({type: END_LOADING});
 export const getMovieInfoActionCreator = (movieInfo) => ({type: GET_MOVIE_INFO, payload: movieInfo});
+export const clearCurrentMovieInfo = () => ({type: CLEAR_CURRENT_MOVIE})
 
 
 export const getMoviesData = (pageNumber) => (dispatch) => {

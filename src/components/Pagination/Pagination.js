@@ -14,7 +14,6 @@ class Pagination extends Component {
             <div>
                 {!loading && currPage > 1 && <NavLink
                     to={`/page=${currPage - 1}`}
-                    activeClassName='pagination_btn_active'
                     className={`d-inline-block pagination_btn`}
                 >
                     Prev. page
@@ -25,7 +24,7 @@ class Pagination extends Component {
                             to={`/page=${index + 1}`}
                             activeClassName='pagination_btn_active'
                             className={`d-inline-block pagination_btn`}
-                            key={index}
+                            key={index +1}
                         >
                             {index + 1}
                         </NavLink>
@@ -33,7 +32,6 @@ class Pagination extends Component {
                 }
                 {!loading && currPage < totalPages && <NavLink
                     to={`/page=${currPage + 1}`}
-                    activeClassName='pagination_btn_active'
                     className={`d-inline-block pagination_btn`}
                 >
                     Next page

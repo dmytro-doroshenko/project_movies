@@ -1,18 +1,21 @@
 .pagination_btn {
   margin: 4px;
   padding: 3px;
-  border: 1px solid gray;
+  border: 1px solid;
+  border-color: var(--color-tertiary);
+  border-radius: 2px;
   transition: all 0.4s;
   text-decoration: none;
-  color: #000;
+  color: var(--color-tertiary);
 }
 
 .pagination_btn:hover {
   cursor: pointer;
-  color: #ffffff;
-  background: #282c34;
+  background: var(--color-secondary);
+  color: var(--bg-logo);
 }
 
 .pagination_btn_active{
-  background: #FFD700;
+  color: var(--color-tertiary);
+  background: var(--color-primary);
 }

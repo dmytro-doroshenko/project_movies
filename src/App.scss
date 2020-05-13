@@ -53,7 +53,6 @@
   //--btn-border: #0d253f;
   //
 
-  transition: all 0.4s;
 }
 
 .theme-dark {
@@ -62,7 +61,7 @@
   --color-tertiary: #90cea1;
   --bg-logo: #0d253f;
   --font-color: #ffffff;
-  --bg-primary: #12345a;
+  --bg-primary: #163e6a;
 
   //--bg-secondary: #0d253f;
   //
@@ -71,9 +70,11 @@
   //--btn-border: #90cea1;
 
 
-  transition: all 0.4s;
+
 }
 
 .main_body {
   background-color: var(--bg-primary);
+  transition: all 0.4s;
+  min-height: 100vh;
 }

@@ -1,0 +1,26 @@
+.loadingSpinner{
+  height: 85vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__spinner{
+    pointer-events: none;
+    width: 2.5em;
+    height: 2.5em;
+    border: 0.4em solid #eee;
+    border-top-color: #3E67EC;
+    border-radius: 50%;
+    animation: loadingspin 1s linear infinite;
+  }
+}
+
+
+@keyframes loadingspin {
+  100% {
+    transform: rotate(360deg)
+  }
+}

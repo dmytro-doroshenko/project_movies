@@ -1,11 +1,11 @@
-import {END_LOADING, GET_MOVIE_INFO, GET_MOVIES, START_LOADING} from "../actionTypes/movies";
+import {CLEAR_CURRENT_MOVIE, END_LOADING, GET_MOVIE_INFO, GET_MOVIES, START_LOADING} from "../actionTypes/movies";
 
 const initialState = {
     loading: false,
     currentPage: 1,
     totalPagesNumber: 0,
     moviesList: [],
-    selectedMovie: {}
+    selectedMovie: {},
 };
 
 export const moviesReducer = (state = initialState, action) => {
@@ -37,6 +37,12 @@ export const moviesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 selectedMovie: {...payload}
+            }
+        }
+        case CLEAR_CURRENT_MOVIE: {
+            return {
+                ...state,
+                selectedMovie: {}
             }
         }
         default: {
