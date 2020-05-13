@@ -1,0 +1,23 @@
+.theme_switcher {
+
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-tertiary);
+
+  &__theme_btn {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid;
+    border-color: var(--color-tertiary);
+    border-radius: 2px;
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    transition: all 0.4s;
+  }
+
+  &__theme_btn:hover {
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    color: black;
+  }
+}

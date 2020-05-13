@@ -16,16 +16,12 @@ function GenreBadges({genre_ids, genresWithNames}) {
                 .then(response => response.json())
                 .then(result => setGenres(result.genres))
         }
-
-
     }, []);
 
     const getGenreName = (genreId) => {
         let genre = genres.find(element => element.id === genreId);
         return genre.name;
     };
-
-
 
     return (
         <div>

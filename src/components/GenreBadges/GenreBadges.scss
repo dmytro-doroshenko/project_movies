@@ -2,8 +2,9 @@
   display: inline-block;
   margin: 5px;
   padding: 5px;
-  background: darkolivegreen;
-  color: white;
-
+  background: var(--color-primary);
+  color: var(--color-tertiary);
   border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--color-tertiary);
 }

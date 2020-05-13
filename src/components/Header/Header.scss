@@ -1,4 +1,14 @@
 .header {
   padding: 20px;
-  background: lightblue;
+  background: var(--color-primary);
+  color: var(--font-color);
+
+  &__logo {
+    background-color: var(--bg-logo);
+    border: 1px solid;
+    border-color: var(--color-tertiary);
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+
 }

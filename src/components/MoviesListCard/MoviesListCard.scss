@@ -1,6 +1,16 @@
-.movies_list_card{
-  border: 1px solid lightblue;
+.movies_list_card {
+  border: 1px solid;
+  border-color: var(--color-tertiary);
+  border-radius: 0 0 4px 4px;
   height: 100%;
+  color: var(--color-tertiary);
+  margin-bottom: 4px;
+  transition: all 0.4s;
+}
+
+.movies_list_card:hover {
+  background-color: var(--color-secondary);
+  color: var(--bg-logo);
 }
 
 .text_justify {

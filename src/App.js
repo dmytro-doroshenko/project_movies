@@ -1,28 +1,36 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import './App.css';
+import React, {Fragment} from 'react';
+import {connect} from 'react-redux';
 import { MoviesPageWithRedux } from "./containers/MoviesPage";
 import Header from "./components/Header/Header";
-import {store} from "./store/store";
 import {Switch, Route} from "react-router-dom";
-
-import './styles/style.css'
 import {MovieInfoWithRedux} from "./components/MovieInfo/MovieInfo";
 
-function App() {
-  return (
+import './App.scss';
+import './styles/style.css'
 
-        <Provider store={store}>
-            <Header />
-            <Switch>
-                <Route exact path='/' component={MoviesPageWithRedux} />
-                <Route path='/page=:pageNum' component={MoviesPageWithRedux} />
-                <Route path='/movieInfo/:movieID' component={MovieInfoWithRedux}/>
-            </Switch>
 
-        </Provider>
+function App({darkTheme}) {
 
-  );
+    return (
+        <Fragment>
+            <div className={`${darkTheme ? 'theme-dark' : 'theme-light'} main_body`}>
+                <Header />
+                <Switch>
+                    <Route exact path='/' component={MoviesPageWithRedux} />
+                    <Route path='/page=:pageNum' component={MoviesPageWithRedux} />
+                    <Route path='/movieInfo/:movieID' component={MovieInfoWithRedux}/>
+                </Switch>
+            </div>
+        </Fragment>
+    );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+
+        darkTheme: state.themesReducer.darkTheme
+    }
+}
+
+
+export const AppWithRedux = connect(mapStateToProps)(App);

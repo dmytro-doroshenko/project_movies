@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.theme-light {
+  --color-primary: #90cea1;
+  --color-secondary: #01b4e4;
+  --color-tertiary: #0d253f;
+  --bg-logo: #0d253f;
+  --font-color: #000000;
+  --bg-primary: #ecfff6;
+
+
+  //--bg-secondary: #90cea1;
+  //
+  //--btn-primary: #90cea1;
+  //--btn-hover: #01b4e4;
+  //--btn-border: #0d253f;
+  //
+
+  transition: all 0.4s;
+}
+
+.theme-dark {
+  --color-primary: #0d253f;
+  --color-secondary: #01b4e4;
+  --color-tertiary: #90cea1;
+  --bg-logo: #0d253f;
+  --font-color: #ffffff;
+  --bg-primary: #12345a;
+
+  //--bg-secondary: #0d253f;
+  //
+  //--btn-primary: #0d253f;
+  //--btn-hover: #01b4e4;
+  //--btn-border: #90cea1;
+
+
+  transition: all 0.4s;
+}
+
+.main_body {
+  background-color: var(--bg-primary);
+}

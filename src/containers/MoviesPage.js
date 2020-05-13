@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import {getMoviesData} from "../actionCreators/movies.action";
 import {PaginationWithRedux} from "../components/Pagination/Pagination";
 
+import './MoviesPage.scss';
+
+const CN = 'movies_page';
 
 function MoviesPage(props) {
     const {getMovies, movies, loading, match: {params: {pageNum}}} = props;
@@ -15,7 +18,7 @@ function MoviesPage(props) {
 
 
    return (
-       <div className='container'>
+       <div className={`${CN} container`}>
            <MoviesList movies={movies} loading={loading}/>
            <PaginationWithRedux />
        </div>
@@ -36,5 +39,7 @@ const mapDispatchToProps = (dispatch) => {
         getMovies: getMoviesData,
     }, dispatch)
 };
+
+
 
 export const MoviesPageWithRedux = connect(mapStateToProps, mapDispatchToProps)(MoviesPage);
