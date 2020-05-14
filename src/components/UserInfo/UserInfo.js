@@ -9,9 +9,7 @@ const CN = 'user_info_panel';
 
 function UserInfo(props) {
 
-    const {isLoggedIn, logIn, logOut} = props;
-
-    console.log(isLoggedIn);
+    const { isLoggedIn, logIn, logOut } = props;
 
     return (
         <div className={CN}>
@@ -31,9 +29,7 @@ function UserInfo(props) {
                             <p>Hello, User</p>
                             <button className={`${CN}__btn`} onClick={logOut}>Log Out</button>
                         </div>
-
                     </Fragment>
-
                 )
             }
         </div>

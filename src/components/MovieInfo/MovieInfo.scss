@@ -12,4 +12,27 @@
   &__details{
     padding-left: 24px;
   }
+
+  &__tag {
+    max-width: 404px;
+  }
+
+  &__poster_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__trailer_link {
+    text-decoration: none;
+    color: var(--color-tertiary);
+    transition: all 0.4s;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  &__trailer_link:hover {
+    background-color: var(--color-secondary);
+    color: var(--bg-logo);
+  }
 }
