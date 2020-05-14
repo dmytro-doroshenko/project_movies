@@ -2,33 +2,97 @@ import React, {Component} from 'react';
 import {bindActionCreators} from "redux";
 import { getMoviesData} from "../../actionCreators/movies.action";
 import {connect} from "react-redux";
-import './Pagination.scss';
 import {NavLink} from "react-router-dom";
+
+import './Pagination.scss';
+
+const CN = 'pagination';
 
 class Pagination extends Component {
 
     render() {
         const {loading, totalPages, currPage} = this.props;
 
+        let pages = [];
+        let leftBorder;
+        let rightBorder;
+        const interval = 5;
+
+        if (currPage - interval > 1) {
+            leftBorder = currPage - interval;
+        } else {
+            leftBorder = 2;
+        }
+
+        if (currPage + interval < totalPages) {
+            rightBorder = currPage + interval;
+        } else {
+            rightBorder = totalPages - 1;
+        }
+
+        for (let i = leftBorder; i <= rightBorder; i++) {
+            pages.push(i);
+        }
+
         return (
-            <div>
+            <div className={`${CN}`}>
                 {!loading && currPage > 1 && <NavLink
                     to={`/page=${currPage - 1}`}
                     className={`d-inline-block pagination_btn`}
                 >
                     Prev. page
                 </NavLink>}
-                {
-                    (new Array(totalPages).fill(1).map((item, index) => (
+                {!loading &&
+                    <NavLink
+                        to={`/page=1`}
+                        activeClassName='pagination_btn_active'
+                        className={`d-inline-block pagination_btn`}
+                        key='1'
+                    >
+                        1
+                    </NavLink>
+                }
+                {!loading && leftBorder > 2 && (
                         <NavLink
-                            to={`/page=${index + 1}`}
+                            to={`/page=${leftBorder - 1}`}
+                            className={`d-inline-block pagination_btn_gap`}
+                            key={leftBorder - 1}
+                        >
+                            ...
+                        </NavLink>
+                    )
+                }
+                {!loading && pages.map(page => (
+                        <NavLink
+                            to={`/page=${page}`}
                             activeClassName='pagination_btn_active'
                             className={`d-inline-block pagination_btn`}
-                            key={index +1}
+                            key={page}
                         >
-                            {index + 1}
+                            {page}
                         </NavLink>
-                    )))
+                    ))
+                }
+                {!loading && rightBorder < totalPages - 1 && (
+                        <NavLink
+                            to={`/page=${rightBorder + 1}`}
+                            activeClassName='pagination_btn_active'
+                            className={`d-inline-block pagination_btn_gap`}
+                            key={rightBorder + 1}
+                        >
+                            ...
+                        </NavLink>
+                    )
+                }
+                {!loading &&
+                    <NavLink
+                        to={`/page=${totalPages}`}
+                        activeClassName='pagination_btn_active'
+                        className={`d-inline-block pagination_btn`}
+                        key={totalPages}
+                    >
+                        {totalPages}
+                    </NavLink>
                 }
                 {!loading && currPage < totalPages && <NavLink
                     to={`/page=${currPage + 1}`}
