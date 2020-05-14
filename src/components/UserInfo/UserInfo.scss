@@ -1,0 +1,36 @@
+.user_info_panel{
+
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-tertiary);
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid;
+    border-color: var(--color-tertiary);
+    border-radius: 2px;
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    transition: all 0.4s;
+  }
+
+  &__btn:hover {
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    color: black;
+  }
+
+  &__icon {
+    display: inline-block;
+    height: auto;
+    max-width: 50px;
+    margin: 0 16px;
+  }
+
+  &__user {
+
+  }
+}

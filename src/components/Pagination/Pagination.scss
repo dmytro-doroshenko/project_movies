@@ -1,5 +1,6 @@
 .pagination {
   text-align: center;
+  padding: 20px;
 }
 
 .pagination_btn {
@@ -16,6 +17,7 @@
     border: none;
     text-decoration: none;
     padding: 0 8px;
+    color: var(--color-tertiary);
   }
 }
 

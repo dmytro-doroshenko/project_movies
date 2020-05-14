@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import { moviesReducer } from "./moviesReducer";
-import { usersReducer } from "./userReducer";
+import { usersReducer } from "./usersReducer";
 import {themesReducer} from "./themesReducer";
 
 

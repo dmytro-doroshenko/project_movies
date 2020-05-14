@@ -1,8 +1,7 @@
-//logo, dark_light theme switcher, search field, user info
 import React from 'react';
 import './Header.scss';
 import logo from '../../img/logo.svg';
-import UserInfo from "../UserInfo/UserInfo";
+import {UserInfoWithRedux} from "../UserInfo/UserInfo";
 import {ThemeSwitcherWithRedux} from "../ThemeSwitcher/ThemeSwitcher";
 
 const CN = 'header';
@@ -14,7 +13,7 @@ function Header() {
                 <div className={`${CN}__logo col-4`}>
                     <img src={logo} alt='The_Movies_Logo'/>
                 </div>
-                <UserInfo/>
+                <UserInfoWithRedux />
                 <ThemeSwitcherWithRedux />
             </div>
         </div>
